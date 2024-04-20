@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/today"
+        android:icon="@drawable/today"
+        android:title="Today" />
+    <item
+        android:id="@+id/goals"
+        android:icon="@drawable/muted"
+        android:title="Goals" />
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/camera"
+        android:title="Camera" />
+    <item
+        android:id="@+id/task"
+        android:icon="@drawable/tasks"
+        android:title="Tasks" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+</menu>
