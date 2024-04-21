@@ -37,6 +37,7 @@
                 android:ellipsize="marquee"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:padding="8dp"
+                android:fontFamily="@font/interregular"
                 android:scrollHorizontally="true"
                 android:singleLine="true"
                 android:text="Similar Name"

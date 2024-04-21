@@ -65,6 +65,7 @@
                 android:text="Food Information"
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"
+                android:fontFamily="@font/interregular"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.057"
@@ -78,6 +79,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:text="Food Information"
+                android:fontFamily="@font/interregular"
                 android:textColor="#FFFFFF"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -93,6 +95,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:text="Description"
+                android:fontFamily="@font/interregular"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +111,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginEnd="16dp"
                 android:text="Description of food"
+                android:fontFamily="@font/interregular"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -123,11 +127,470 @@
                 android:layout_marginEnd="16dp"
                 android:text="Macro Nutrients"
                 android:textColor="@color/black"
+                android:fontFamily="@font/interregular"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/food_desc" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_macro_nutri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FDF7F7"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/macro">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rec_cor"
+                    android:padding="8dp"
+                    android:paddingBottom="10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Per 250gm"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="145dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Per Serve"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/text1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+
+                        <TextView
+                            android:id="@+id/text_eng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Energy"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/eng_per_ser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="400 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/eng_per_gm"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/eng_per_gm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="500 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+                        <TextView
+                            android:id="@+id/text_pro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Protein"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/pro_per_ser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="400 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/pro_per_gm"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/pro_per_gm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="500 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+
+                        <TextView
+                            android:id="@+id/text_trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Trans Fat"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/trans_per_ser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="400 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/trans_per_gm"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/trans_per_gm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="500 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+
+                        <TextView
+                            android:id="@+id/text_satu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Saturated Fat"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/satu_per_ser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="400 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/satu_per_gm"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/satu_per_gm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="500 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+
+                        <TextView
+                            android:id="@+id/text_carbo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Carbohydrates"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/carb_per_ser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="400 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/carb_per_gm"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/carb_per_gm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="500 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+
+                        <TextView
+                            android:id="@+id/text_fibre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="Fiber"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/fiber_per_ser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="400 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/fiber_per_gm"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/fiber_per_gm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/interregular"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="8dp"
+                            android:text="500 J"
+                            android:textColor="#707070"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
 
             <TextView
                 android:id="@+id/facts"
@@ -137,12 +600,13 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
                 android:text="Facts"
+                android:fontFamily="@font/interregular"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/macro" />
+                app:layout_constraintTop_toBottomOf="@+id/card_macro_nutri" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_fact"
@@ -163,6 +627,7 @@
                 android:gravity="center"
                 android:padding="8dp"
                 android:text="Similar Recipes"
+                android:fontFamily="@font/interregular"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
